@@ -3,11 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Daftar 15 Nabi & Rasul — Teladan Hidup</title>
+  <title>Kisah Para Nabi & Rasul sebagai Teladan Hidup</title>
+  <meta name="description" content="Mengenal kisah 15 Nabi dan Rasul sebagai sumber inspirasi dan teladan dalam kehidupan sehari-hari." />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
+<!-- ===== NAVBAR ===== -->
 <nav>
   <div class="nav-logo">
     <span class="ornamen">☽</span>
@@ -17,246 +19,264 @@
     </div>
   </div>
   <ul class="nav-links">
-    <li><a href="index.html">Beranda</a></li>
-    <li><a href="daftar-nabi.html" class="active">Daftar Nabi</a></li>
+    <li><a href="index.html" class="active">Beranda</a></li>
+    <li><a href="daftar-nabi.html">Daftar Nabi</a></li>
     <li><a href="timeline.html">Timeline</a></li>
     <li><a href="quiz.html">Quiz</a></li>
     <li><a href="about.html">Tentang</a></li>
   </ul>
-  <div class="hamburger"><span></span><span></span><span></span></div>
+  <div class="hamburger" id="hamburger">
+    <span></span><span></span><span></span>
+  </div>
 </nav>
 
-<div class="page-hero">
-  <h1>15 Nabi & Rasul</h1>
-  <p>
-    Mengenal kisah dan teladan 15 Nabi & Rasul yang tersedia
-    dalam website ini sebagai pembelajaran akhlak dan keimanan.
-  </p>
-</div>
-
-<div class="filter-bar">
-  <button class="filter-btn active" data-filter="semua">Semua</button>
-  <button class="filter-btn" data-filter="sabar">Kesabaran</button>
-  <button class="filter-btn" data-filter="pemimpin">Kepemimpinan</button>
-  <button class="filter-btn" data-filter="taat">Ketaatan</button>
-  <button class="filter-btn" data-filter="amanah">Kejujuran</button>
-</div>
-
-<div class="search-box">
-  <input
-    type="text"
-    id="searchNabi"
-    placeholder="🔍 Cari nama nabi..."
-  >
-</div>
-
-<section style="padding: 60px 5%;">
-
-  <div class="nabi-grid" id="nabi-grid">
-
-    <div class="nabi-card" data-tags="sabar" onclick="location.href='nabi/adam.html'">
-      <div class="nabi-card-header">
-        <div class="nabi-icon">🌿</div>
-        <h3>Nabi Adam AS</h3><small>Nabi ke-1</small>
-      </div>
-      <div class="nabi-card-body">
-        <p>Manusia pertama, diajari nama-nama segala sesuatu oleh Allah. Teladan taubat setelah berbuat kesalahan.</p>
-        <span class="tag-teladan">Taubat</span>
-      </div>
-      <div class="nabi-card-footer"><span class="link-baca">Baca Kisah →</span></div>
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="hero-ornamen">☽</div>
+  <div class="hero-content">
+    <div class="hero-badge">✦ Website Edukasi Islam ✦</div>
+    <h1>
+      Kisah Para <span class="emas">Nabi & Rasul</span><br/>
+      sebagai Teladan Hidup
+    </h1>
+    <div class="hero-ayat">
+      <p>"Sesungguhnya pada kisah-kisah mereka itu terdapat pengajaran bagi orang-orang yang mempunyai akal."</p>
+      <small>— QS. Yusuf: 111</small>
     </div>
-
-    <div class="nabi-card" data-tags="sabar" onclick="location.href='nabi/idris.html'">
-      <div class="nabi-card-header">
-        <div class="nabi-icon">✍️</div>
-        <h3>Nabi Idris AS</h3><small>Nabi ke-2</small>
-      </div>
-      <div class="nabi-card-body">
-        <p>Dikenal sebagai orang yang berilmu tinggi dan tekun beribadah. Diangkat Allah ke tempat yang tinggi.</p>
-        <span class="tag-teladan">Keilmuan</span>
-      </div>
-      <div class="nabi-card-footer"><span class="link-baca">Baca Kisah →</span></div>
+    <div class="hero-btns">
+      <a href="daftar-nabi.html" class="btn-primer">Jelajahi Kisah Para Nabi →</a>
+      <a href="quiz.html" class="btn-sekunder">Uji Pengetahuanmu</a>
     </div>
-
-    <div class="nabi-card" data-tags="sabar" onclick="location.href='nabi/nuh.html'">
-      <div class="nabi-card-header">
-        <div class="nabi-icon">⛵</div>
-        <h3>Nabi Nuh AS</h3><small>Nabi ke-3</small>
+    <div class="hero-stats">
+      <div class="stat-item">
+        <span class="angka" data-target="25">0</span>
+        <span class="label">Nabi & Rasul</span>
       </div>
-      <div class="nabi-card-body">
-        <p>Berdakwah 950 tahun, membangun bahtera atas perintah Allah. Simbol keteguhan dan kesabaran dakwah.</p>
-        <span class="tag-teladan">Kesabaran</span><span class="tag-teladan">Dakwah</span>
+      <div class="stat-item">
+        <span class="angka" data-target="10">0</span>
+        <span class="label">Soal Quiz</span>
       </div>
-      <div class="nabi-card-footer"><span class="link-baca">Baca Kisah →</span></div>
+      <div class="stat-item">
+        <span class="angka" data-target="4">0</span>
+        <span class="label">Kategori Teladan</span>
+      </div>
     </div>
-
-    <div class="nabi-card" data-tags="taat" onclick="location.href='nabi/hud.html'">
-      <div class="nabi-card-header">
-        <div class="nabi-icon">🌬️</div>
-        <h3>Nabi Hud AS</h3><small>Nabi ke-4</small>
-      </div>
-      <div class="nabi-card-body">
-        <p>Diutus kepada kaum 'Ad. Berani menegur kaum yang sombong dan melampaui batas.</p>
-        <span class="tag-teladan">Keberanian</span>
-      </div>
-      <div class="nabi-card-footer"><span class="link-baca">Baca Kisah →</span></div>
-    </div>
-
-    <div class="nabi-card" data-tags="taat" onclick="location.href='nabi/shaleh.html'">
-      <div class="nabi-card-header">
-        <div class="nabi-icon">🐪</div>
-        <h3>Nabi Shaleh AS</h3><small>Nabi ke-5</small>
-      </div>
-      <div class="nabi-card-body">
-        <p>Diutus kepada kaum Tsamud. Membawa mukjizat unta betina dari batu. Teladan kesabaran menghadapi pembangkangan.</p>
-        <span class="tag-teladan">Amanah</span>
-      </div>
-      <div class="nabi-card-footer"><span class="link-baca">Baca Kisah →</span></div>
-    </div>
-
-    <div class="nabi-card" data-tags="taat" onclick="location.href='nabi/ibrahim.html'">
-      <div class="nabi-card-header">
-        <div class="nabi-icon">🔥</div>
-        <h3>Nabi Ibrahim AS</h3><small>Nabi ke-6</small>
-      </div>
-      <div class="nabi-card-body">
-        <p>Khalilullah, kekasih Allah. Mengajarkan tauhid sejati dan pengorbanan terbesar demi ketaatan kepada Allah.</p>
-        <span class="tag-teladan">Tauhid</span><span class="tag-teladan">Pengorbanan</span>
-      </div>
-      <div class="nabi-card-footer"><span class="link-baca">Baca Kisah →</span></div>
-    </div>
-
-    <div class="nabi-card" data-tags="taat" onclick="location.href='nabi/luth.html'">
-      <div class="nabi-card-header">
-        <div class="nabi-icon">🏙️</div>
-        <h3>Nabi Luth AS</h3><small>Nabi ke-7</small>
-      </div>
-      <div class="nabi-card-body">
-        <p>Keponakan Nabi Ibrahim, diutus kepada kaum Sodom. Gigih berdakwah di tengah masyarakat yang rusak moralnya.</p>
-        <span class="tag-teladan">Keteguhan</span>
-      </div>
-      <div class="nabi-card-footer"><span class="link-baca">Baca Kisah →</span></div>
-    </div>
-
-    <div class="nabi-card" data-tags="taat" onclick="location.href='nabi/ismail.html'">
-      <div class="nabi-card-header">
-        <div class="nabi-icon">🕌</div>
-        <h3>Nabi Ismail AS</h3><small>Nabi ke-8</small>
-      </div>
-      <div class="nabi-card-body">
-        <p>Putra Nabi Ibrahim AS. Rela dikurbankan demi taat kepada Allah. Bersama ayahnya membangun Ka'bah.</p>
-        <span class="tag-teladan">Ketaatan</span><span class="tag-teladan">Ikhlas</span>
-      </div>
-      <div class="nabi-card-footer"><span class="link-baca">Baca Kisah →</span></div>
-    </div>
-
-    <div class="nabi-card" data-tags="sabar" onclick="location.href='nabi/ishaq.html'">
-      <div class="nabi-card-header">
-        <div class="nabi-icon">🌟</div>
-        <h3>Nabi Ishaq AS</h3><small>Nabi ke-9</small>
-      </div>
-      <div class="nabi-card-body">
-        <p>Putra Nabi Ibrahim dari Siti Sarah. Nenek moyang Bani Israil dan leluhur banyak nabi sesudahnya.</p>
-        <span class="tag-teladan">Ketulusan</span>
-      </div>
-      <div class="nabi-card-footer"><span class="link-baca">Baca Kisah →</span></div>
-    </div>
-
-    <div class="nabi-card" data-tags="amanah" onclick="location.href='nabi/yaqub.html'">
-      <div class="nabi-card-header">
-        <div class="nabi-icon">👨‍👦</div>
-        <h3>Nabi Yaqub AS</h3><small>Nabi ke-10</small>
-      </div>
-      <div class="nabi-card-body">
-        <p>Putra Nabi Ishaq AS, ayah dari Nabi Yusuf AS. Teladan kasih sayang orang tua dan kesabaran dalam kehilangan.</p>
-        <span class="tag-teladan">Kasih Sayang</span>
-      </div>
-      <div class="nabi-card-footer"><span class="link-baca">Baca Kisah →</span></div>
-    </div>
-
-    <div class="nabi-card" data-tags="amanah pemimpin" onclick="location.href='nabi/yusuf.html'">
-      <div class="nabi-card-header">
-        <div class="nabi-icon">👑</div>
-        <h3>Nabi Yusuf AS</h3><small>Nabi ke-11</small>
-      </div>
-      <div class="nabi-card-body">
-        <p>Kisahnya disebut "Ahsanal Qashash" (sebaik-baik kisah). Mengajarkan keteguhan iman, kejujuran, dan memaafkan.</p>
-        <span class="tag-teladan">Kejujuran</span><span class="tag-teladan">Memaafkan</span>
-      </div>
-      <div class="nabi-card-footer"><span class="link-baca">Baca Kisah →</span></div>
-    </div>
-
-    <div class="nabi-card" data-tags="sabar pemimpin" onclick="location.href='nabi/ayyub.html'">
-      <div class="nabi-card-header">
-        <div class="nabi-icon">💚</div>
-        <h3>Nabi Ayyub AS</h3><small>Nabi ke-12</small>
-      </div>
-      <div class="nabi-card-body">
-        <p>Diuji dengan penyakit berat bertahun-tahun, namun tidak pernah mengeluh. Simbol tertinggi kesabaran.</p>
-        <span class="tag-teladan">Kesabaran</span><span class="tag-teladan">Syukur</span>
-      </div>
-      <div class="nabi-card-footer"><span class="link-baca">Baca Kisah →</span></div>
-    </div>
-
-    <div class="nabi-card" data-tags="pemimpin" onclick="location.href='nabi/musa.html'">
-      <div class="nabi-card-header">
-        <div class="nabi-icon">🪄</div>
-        <h3>Nabi Musa AS</h3><small>Nabi ke-13</small>
-      </div>
-      <div class="nabi-card-body">
-        <p>Kalimullah, berbicara langsung dengan Allah di Bukit Sinai. Memimpin Bani Israil keluar dari perbudakan Firaun.</p>
-        <span class="tag-teladan">Keberanian</span><span class="tag-teladan">Kepemimpinan</span>
-      </div>
-      <div class="nabi-card-footer"><span class="link-baca">Baca Kisah →</span></div>
-    </div>
-
-    <div class="nabi-card" data-tags="taat" onclick="location.href='nabi/isa.html'">
-      <div class="nabi-card-header">
-        <div class="nabi-icon">✨</div>
-        <h3>Nabi Isa AS</h3><small>Nabi ke-14</small>
-      </div>
-      <div class="nabi-card-body">
-        <p>Lahir tanpa ayah, diberikan mukjizat menghidupkan orang mati. Mengajarkan kasih sayang dan kesederhanaan.</p>
-        <span class="tag-teladan">Kasih Sayang</span>
-      </div>
-      <div class="nabi-card-footer"><span class="link-baca">Baca Kisah →</span></div>
-    </div>
-
-    <div class="nabi-card" data-tags="amanah taat pemimpin" onclick="location.href='nabi/muhammad.html'" style="border: 2px solid var(--emas);">
-      <div class="nabi-card-header" style="background: linear-gradient(135deg, #6B4F00, #D4A017);">
-        <div class="nabi-icon">⭐</div>
-        <h3>Nabi Muhammad SAW</h3><small>Nabi & Rasul Terakhir</small>
-      </div>
-      <div class="nabi-card-body">
-        <p>Khatamul Anbiya, penutup seluruh nabi. Uswatun Hasanah, suri tauladan terbaik bagi seluruh umat manusia.</p>
-        <span class="tag-teladan">Akhlak Mulia</span><span class="tag-teladan">Uswatun Hasanah</span>
-      </div>
-      <div class="nabi-card-footer"><span class="link-baca">Baca Kisah →</span></div>
-    </div>
-
   </div>
 </section>
 
+<!-- ===== FEATURED NABI ===== -->
+<section class="featured-nabi">
+  <div class="section-header">
+    <div class="section-badge">✦ Kisah Pilihan ✦</div>
+    <h2>Mengenal Para Nabi & Rasul</h2>
+    <p>Setiap kisah membawa hikmah mendalam yang relevan untuk kehidupan kita hari ini.</p>
+  </div>
+
+  <div class="nabi-grid">
+
+    <div class="nabi-card" onclick="location.href='nabi/adam.html'">
+      <div class="nabi-card-header">
+        <div class="nabi-icon">🌿</div>
+        <h3>Nabi Adam AS</h3>
+        <small>Manusia Pertama</small>
+      </div>
+      <div class="nabi-card-body">
+        <p>Nabi pertama sekaligus manusia pertama yang diciptakan Allah. Mengajarkan tentang taubat dan bangkit dari kesalahan.</p>
+        <span class="tag-teladan">Taubat</span>
+        <span class="tag-teladan">Bangkit</span>
+      </div>
+      <div class="nabi-card-footer">
+        <span class="link-baca">Baca Kisah →</span>
+        <span style="font-size:0.75rem; color: var(--hijau-muda);">QS. Al-Baqarah ayat 30</span>
+      </div>
+    </div>
+
+    <div class="nabi-card" onclick="location.href='nabi/nuh.html'">
+      <div class="nabi-card-header">
+        <div class="nabi-icon">⛵</div>
+        <h3>Nabi Nuh AS</h3>
+        <small>Pembuat Bahtera</small>
+      </div>
+      <div class="nabi-card-body">
+        <p>Berdakwah 950 tahun dengan penuh kesabaran. Membangun bahtera atas perintah Allah untuk menyelamatkan umat beriman.</p>
+        <span class="tag-teladan">Kesabaran</span>
+        <span class="tag-teladan">Keteguhan</span>
+      </div>
+      <div class="nabi-card-footer">
+        <span class="link-baca">Baca Kisah →</span>
+        <span style="font-size:0.75rem; color: var(--hijau-muda);">QS. Nuh ayat 1</span>
+      </div>
+    </div>
+
+    <div class="nabi-card" onclick="location.href='nabi/ibrahim.html'">
+      <div class="nabi-card-header">
+        <div class="nabi-icon">🔥</div>
+        <h3>Nabi Ibrahim AS</h3>
+        <small>Khalilullah (Kekasih Allah)</small>
+      </div>
+      <div class="nabi-card-body">
+        <p>Gelar Khalilullah (kekasih Allah). Mengajarkan tauhid dan pengorbanan tertinggi demi ketaatan kepada Allah SWT.</p>
+        <span class="tag-teladan">Tauhid</span>
+        <span class="tag-teladan">Pengorbanan</span>
+      </div>
+      <div class="nabi-card-footer">
+        <span class="link-baca">Baca Kisah →</span>
+        <span style="font-size:0.75rem; color: var(--hijau-muda);">Al-Anbiya ayat 69</span>
+      </div>
+    </div>
+
+    <div class="nabi-card" onclick="location.href='nabi/musa.html'">
+      <div class="nabi-card-header">
+        <div class="nabi-icon">🪄</div>
+        <h3>Nabi Musa AS</h3>
+        <small>Kalimullah (yang Berbicara dengan Allah)</small>
+      </div>
+      <div class="nabi-card-body">
+        <p>Menghadapi Firaun dengan keberanian luar biasa. Memimpin Bani Israil keluar dari perbudakan Mesir dengan pertolongan Allah.</p>
+        <span class="tag-teladan">Keberanian</span>
+        <span class="tag-teladan">Kepemimpinan</span>
+      </div>
+      <div class="nabi-card-footer">
+        <span class="link-baca">Baca Kisah →</span>
+        <span style="font-size:0.75rem; color: var(--hijau-muda);">QS. Al-Qasas ayat 28</span>
+      </div>
+    </div>
+
+    <div class="nabi-card" onclick="location.href='nabi/ayyub.html'">
+      <div class="nabi-card-header">
+        <div class="nabi-icon">💚</div>
+        <h3>Nabi Ayyub AS</h3>
+        <small>Simbol Kesabaran</small>
+      </div>
+      <div class="nabi-card-body">
+        <p>Diuji dengan penyakit berat selama bertahun-tahun, namun tetap bersyukur dan bersabar. Teladan kesabaran tiada tara.</p>
+        <span class="tag-teladan">Kesabaran</span>
+        <span class="tag-teladan">Syukur</span>
+      </div>
+      <div class="nabi-card-footer">
+        <span class="link-baca">Baca Kisah →</span>
+        <span style="font-size:0.75rem; color: var(--hijau-muda);">QS. Al-Anbiya ayat 83</span>
+      </div>
+    </div>
+
+    <div class="nabi-card" onclick="location.href='nabi/muhammad.html'">
+      <div class="nabi-card-header" style="background: linear-gradient(135deg, #8B6914, #D4A017);">
+        <div class="nabi-icon">⭐</div>
+        <h3>Nabi Muhammad SAW</h3>
+        <small>Khatamul Anbiya</small>
+      </div>
+      <div class="nabi-card-body">
+        <p>Rasul terakhir, penutup para nabi. Uswatun Hasanah (suri tauladan terbaik) bagi seluruh umat manusia sepanjang zaman.</p>
+        <span class="tag-teladan">Akhlak Mulia</span>
+        <span class="tag-teladan">Uswatun Hasanah</span>
+      </div>
+      <div class="nabi-card-footer">
+        <span class="link-baca">Baca Kisah →</span>
+        <span style="font-size:0.75rem; color: var(--hijau-muda);">QS. Al-Ahzab ayat 21</span>
+      </div>
+    </div>
+
+  </div>
+
+  <div style="text-align: center; margin-top: 40px;">
+    <a href="daftar-nabi.html" class="btn-primer">Lihat Semua 15 Nabi & Rasul →</a>
+  </div>
+</section>
+
+<!-- ===== KATEGORI TELADAN ===== -->
+<section class="teladan-section">
+  <div class="section-header">
+    <div class="section-badge">✦ Hikmah & Pelajaran ✦</div>
+    <h2>Kategori Teladan Para Nabi</h2>
+    <p>Empat nilai utama yang dapat kita terapkan dalam kehidupan sehari-hari.</p>
+  </div>
+
+  <div class="teladan-grid">
+    <div class="teladan-card">
+      <div class="teladan-icon">🌱</div>
+      <h3>Ketabahan & Kesabaran</h3>
+      <p>Menghadapi cobaan dengan hati lapang, tidak berputus asa dari rahmat Allah SWT meski ujian datang bertubi-tubi.</p>
+      <div class="teladan-nabi-list">
+        <span class="chip-nabi">Nabi Ayyub AS</span>
+        <span class="chip-nabi">Nabi Yusuf AS</span>
+        <span class="chip-nabi">Nabi Nuh AS</span>
+        <span class="chip-nabi">Nabi Yaqub AS</span>
+      </div>
+    </div>
+
+    <div class="teladan-card">
+      <div class="teladan-icon">⚖️</div>
+      <h3>Kepemimpinan & Keadilan</h3>
+      <p>Memimpin dengan adil, bijaksana, dan penuh tanggung jawab. Menjadikan kebenaran sebagai landasan setiap keputusan.</p>
+      <div class="teladan-nabi-list">
+        <span class="chip-nabi">Nabi Musa AS</span>
+        <span class="chip-nabi">Nabi Muhammad SAW</span>
+        <span class="chip-nabi">Nabi Isa AS</span>
+        <span class="chip-nabi">Nabi Idris AS</span>
+      </div>
+    </div>
+
+    <div class="teladan-card">
+      <div class="teladan-icon">🤲</div>
+      <h3>Ketaatan & Pengorbanan</h3>
+      <p>Mengutamakan perintah Allah di atas segalanya. Ikhlas berkorban demi nilai-nilai yang lebih tinggi dan abadi.</p>
+      <div class="teladan-nabi-list">
+        <span class="chip-nabi">Nabi Ibrahim AS</span>
+        <span class="chip-nabi">Nabi Ismail AS</span>
+        <span class="chip-nabi">Nabi Adam AS</span>
+        <span class="chip-nabi">Nabi Luth AS</span>
+      </div>
+    </div>
+
+    <div class="teladan-card">
+      <div class="teladan-icon">💎</div>
+      <h3>Kejujuran & Amanah</h3>
+      <p>Menjaga kepercayaan, berkata jujur, dan dapat diandalkan. Sifat Al-Amin yang menjadi fondasi karakter mulia.</p>
+      <div class="teladan-nabi-list">
+        <span class="chip-nabi">Nabi Muhammad SAW</span>
+        <span class="chip-nabi">Nabi Hud AS</span>
+        <span class="chip-nabi">Nabi Shaleh AS</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== QUIZ CTA ===== -->
+<section class="quiz-section">
+  <div class="section-header">
+    <div class="section-badge">✦ Uji Pengetahuan ✦</div>
+    <h2>Seberapa Kenal Kamu dengan Para Nabi?</h2>
+    <p>Jawab 10 pertanyaan tentang kisah para Nabi & Rasul dan lihat seberapa dalam pemahamanmu!</p>
+  </div>
+  <a href="quiz.html" class="btn-primer" style="font-size: 1rem; padding: 16px 40px;">Mulai Quiz Sekarang →</a>
+</section>
+
+<!-- ===== FOOTER ===== -->
 <footer>
   <div class="footer-grid">
     <div class="footer-brand">
       <div class="ornamen">☽</div>
       <h3>Para Nabi & Rasul</h3>
-      <p>Website edukasi Islam tentang kisah dan teladan para Nabi & Rasul.</p>
+      <p>Website edukasi Islam yang menyajikan kisah dan teladan 25 Nabi & Rasul secara informatif dan mudah dipahami.</p>
     </div>
     <div class="footer-col">
       <h4>Navigasi</h4>
       <ul>
         <li><a href="index.html">Beranda</a></li>
         <li><a href="daftar-nabi.html">Daftar Nabi</a></li>
-        <li><a href="quiz.html">Quiz</a></li>
-        <li><a href="about.html">Tentang</a></li>
+        <li><a href="timeline.html">Timeline Sejarah</a></li>
+        <li><a href="quiz.html">Quiz Interaktif</a></li>
+        <li><a href="about.html">Tentang Kami</a></li>
       </ul>
     </div>
     <div class="footer-col">
-      <h4>Informasi</h4>
+      <h4>Para Nabi</h4>
       <ul>
-        <li><a href="timeline.html">Timeline Sejarah</a></li>
+        <li><a href="nabi/adam.html">Nabi Adam AS</a></li>
+        <li><a href="nabi/ibrahim.html">Nabi Ibrahim AS</a></li>
+        <li><a href="nabi/musa.html">Nabi Musa AS</a></li>
+        <li><a href="nabi/isa.html">Nabi Isa AS</a></li>
+        <li><a href="nabi/muhammad.html">Nabi Muhammad SAW</a></li>
       </ul>
     </div>
   </div>
@@ -266,47 +286,5 @@
 </footer>
 
 <script src="js/main.js"></script>
-
-<script>
-  const filterBtns = document.querySelectorAll('.filter-btn');
-  const nabiCards = document.querySelectorAll('.nabi-card');
-
-  filterBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      filterBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-
-      const filter = btn.dataset.filter;
-
-      nabiCards.forEach(card => {
-        if (
-          filter === 'semua' ||
-          (card.dataset.tags && card.dataset.tags.includes(filter))
-        ) {
-          card.style.display = '';
-        } else {
-          card.style.display = 'none';
-        }
-      });
-    });
-  });
-
-  // SEARCH
-  const searchInput = document.getElementById('searchNabi');
-
-  searchInput.addEventListener('input', () => {
-    const keyword = searchInput.value.toLowerCase();
-
-    nabiCards.forEach(card => {
-      const nama = card.querySelector('h3').textContent.toLowerCase();
-
-      if (nama.includes(keyword)) {
-        card.style.display = '';
-      } else {
-        card.style.display = 'none';
-      }
-    });
-  });
-</script>
 </body>
 </html>
