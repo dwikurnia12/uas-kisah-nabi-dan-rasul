@@ -1,0 +1,73 @@
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+
+  .nav-links {
+      display:none;
+      flex-direction:column;
+      position:absolute;
+      top:60px;
+      left:0;
+      right:0;
+      background:var(--hijau-tua);
+      padding:20px;
+  }
+
+  .nav-links.open {
+      display:flex;
+  }
+
+  .hamburger {
+      display:flex;
+  }
+
+  .hero-stats {
+      gap:24px;
+  }
+
+  .footer-grid {
+      grid-template-columns:1fr;
+      gap:32px;
+  }
+
+  .timeline-line {
+      left:24px;
+  }
+
+  .timeline-item {
+      grid-template-columns:48px 1fr;
+  }
+
+  .timeline-item:nth-child(even) .timeline-kiri,
+  .timeline-kiri {
+      display:none;
+  }
+
+  .timeline-kanan,
+  .timeline-item:nth-child(even) .timeline-kanan {
+      padding-left:20px;
+      order:3;
+      text-align:left;
+  }
+
+  .timeline-tengah,
+  .timeline-item:nth-child(even) .timeline-tengah {
+      order:1;
+  }
+
+  .nabi-detail-hero {
+      grid-template-columns:1fr;
+      text-align:center;
+  }
+
+  .nabi-info-detail .meta {
+      justify-content:center;
+  }
+
+  .nabi-konten {
+      grid-template-columns:1fr;
+  }
+
+  .sidebar-nabi {
+      position:static;
+  }
+}

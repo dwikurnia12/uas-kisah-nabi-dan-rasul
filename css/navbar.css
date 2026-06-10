@@ -1,0 +1,78 @@
+/* ===== NAVBAR ===== */
+nav {
+  background: var(--hijau-tua);
+  padding: 0 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: var(--bayangan);
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 0;
+}
+
+.nav-logo .ornamen {
+  font-size: 1.6rem;
+  color: var(--emas);
+}
+
+.nav-logo span {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  color: var(--putih);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.nav-logo small {
+  display: block;
+  font-family: 'Lato', sans-serif;
+  font-size: 0.7rem;
+  color: var(--hijau-muda);
+  font-weight: 300;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.nav-links {
+  display: flex;
+  gap: 8px;
+  list-style: none;
+}
+
+.nav-links a {
+  color: rgba(255,255,255,0.85);
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-size: 0.88rem;
+  transition: all 0.2s;
+  font-weight: 400;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  background: var(--emas);
+  color: var(--hijau-tua);
+  font-weight: 700;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 2px;
+  background: var(--putih);
+  transition: 0.3s;
+}
