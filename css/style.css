@@ -1435,51 +1435,72 @@ footer .footer-col ul a:hover::after {
   width: 100%;
 }
 
-/* =========================
-   MOBILE TIMELINE FIX
-========================= */
-@media (max-width:768px){
+/* ===== TIMELINE MOBILE FIX ===== */
+@media screen and (max-width: 768px){
 
-  .timeline-container,
-  .timeline {
-    width:100%;
-    padding:20px 10px;
-  }
-
-  .timeline::before{
-    left:30px !important;
+  .timeline-line{
+    left: 25px;
+    transform: none;
   }
 
   .timeline-item{
-    width:100% !important;
-    display:block !important;
-    margin-bottom:40px;
-    padding-left:70px !important;
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 30px;
   }
 
-  .timeline-item:nth-child(even){
-    left:0 !important;
+  .timeline-kiri,
+  .timeline-kanan{
+    padding: 0 !important;
+    text-align: left !important;
+    width: auto;
+    flex: 1;
   }
 
-  .timeline-content,
+  .timeline-item:nth-child(even) .timeline-kiri,
+  .timeline-item:nth-child(even) .timeline-kanan{
+    padding: 0 !important;
+    text-align: left !important;
+  }
+
+  .timeline-tengah{
+    width: 50px;
+    min-width: 50px;
+  }
+
+  .timeline-dot{
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+
   .timeline-card{
-    width:100% !important;
-    max-width:none !important;
-    min-width:auto !important;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px;
   }
 
-  .timeline-icon{
-    left:30px !important;
-    transform:translateX(-50%);
+  .timeline-card h4{
+    font-size: 0.95rem;
   }
 
-  .timeline-content h3{
-    font-size:1.2rem;
+  .timeline-card p{
+    font-size: 0.85rem;
+    line-height: 1.6;
   }
 
-  .timeline-content p{
-    font-size:0.95rem;
-    line-height:1.7;
-    word-break:normal;
+  .timeline-era{
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  /* sembunyikan kolom kosong yang bikin layout berantakan */
+  .timeline-item:nth-child(odd) .timeline-kanan > .timeline-era{
+    display: block;
+  }
+
+  .timeline-item:nth-child(even) .timeline-kiri > .timeline-era{
+    display: block;
   }
 }
