@@ -1435,90 +1435,73 @@ footer .footer-col ul a:hover::after {
   width: 100%;
 }
 
-/* ===== TIMELINE MOBILE FIX ===== */
-@media screen and (max-width: 768px){
+/* ===== TIMELINE MOBILE ===== */
+@media screen and (max-width:768px){
+
+  .timeline-wrapper{
+    padding: 0 15px;
+  }
 
   .timeline-line{
-    left: 40px;
-    transform: none;
+    left: 30px;
+    transform:none;
   }
 
   .timeline-item{
-    display: flex;
-    align-items: flex-start;
-    gap: 15px;
-    margin-bottom: 30px;
+    display:grid;
+    grid-template-columns:60px 1fr;
+    gap:12px;
+    margin-bottom:25px;
+    align-items:flex-start;
   }
 
+  /* titik timeline */
+  .timeline-tengah{
+    grid-column:1;
+    width:60px;
+    justify-content:center;
+  }
+
+  .timeline-dot{
+    width:40px;
+    height:40px;
+    font-size:1rem;
+  }
+
+  /* card kiri & kanan jadi satu kolom */
   .timeline-kiri,
   .timeline-kanan{
-    padding: 0 !important;
-    text-align: left !important;
-    width: auto;
-    flex: 1;
+    grid-column:2;
+    width:100%;
+    padding:0 !important;
+    text-align:left !important;
   }
 
   .timeline-item:nth-child(even) .timeline-kiri,
   .timeline-item:nth-child(even) .timeline-kanan{
-    padding: 0 !important;
-    text-align: left !important;
-  }
-
-  .timeline-tengah{
-    width: 70px;
-    min-width: 70px;
-  }
-
-  .timeline-dot{
-    width: 40px;
-    height: 40px;
-    font-size: 1rem;
+    padding:0 !important;
+    text-align:left !important;
   }
 
   .timeline-card{
-    width: 100%;
-    box-sizing: border-box;
-    padding: 15px;
+    width:100%;
+    margin:0;
+    padding:15px;
+    box-sizing:border-box;
   }
 
   .timeline-card h4{
-    font-size: 0.95rem;
+    font-size:0.95rem;
   }
 
   .timeline-card p{
-    font-size: 0.85rem;
-    line-height: 1.6;
+    font-size:0.85rem;
+    line-height:1.6;
   }
-  
-  .timeline-card{
-    margin-left: -10px;
-}
 
   .timeline-era{
-    display: block;
-    margin-bottom: 8px;
-  }
-
-  /* sembunyikan kolom kosong yang bikin layout berantakan */
-  .timeline-item:nth-child(odd) .timeline-kanan > .timeline-era{
-    display: block;
-  }
-
-  .timeline-item:nth-child(even) .timeline-kiri > .timeline-era{
-    display: block;
-  }
-}
-@media screen and (max-width:768px){
-
-  .timeline-kiri .timeline-era,
-  .timeline-kanan .timeline-era{
-      font-size:0.9rem;
-      margin-bottom:10px;
-      display:block;
-  }
-
-  .timeline-item .timeline-kiri:empty,
-  .timeline-item .timeline-kanan:empty{
-      display:none;
+    display:block;
+    margin-bottom:8px;
+    font-size:0.8rem;
   }
 }
