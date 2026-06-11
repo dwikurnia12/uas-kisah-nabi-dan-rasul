@@ -8,6 +8,18 @@
 </head>
 <body>
 
+<!-- ===== PRELOADER ===== -->
+<div id="preloader">
+  <div class="preloader-content">
+    <div class="preloader-logo">☽</div>
+    <div class="preloader-text">Para Nabi & Rasul</div>
+    <div class="preloader-bar"></div>
+  </div>
+</div>
+
+<!-- ===== SCROLL PROGRESS BAR ===== -->
+<div id="scroll-progress"></div>
+
 <nav>
   <div class="nav-logo">
     <span class="ornamen">☽</span>
@@ -23,6 +35,11 @@
     <li><a href="quiz.html">Quiz</a></li>
     <li><a href="about.html">Tentang</a></li>
   </ul>
+  <div class="theme-toggle-container">
+    <button id="theme-toggle" class="theme-toggle-btn" title="Ubah Tema">
+      <span id="theme-toggle-icon">🌙</span>
+    </button>
+  </div>
   <div class="hamburger"><span></span><span></span><span></span></div>
 </nav>
 
@@ -35,6 +52,7 @@
 </div>
 
 <div class="filter-bar">
+  <button class="filter-btn active" data-filter="semua">Semua</button>
   <button class="filter-btn" data-filter="sabar">Kesabaran</button>
   <button class="filter-btn" data-filter="pemimpin">Kepemimpinan</button>
   <button class="filter-btn" data-filter="taat">Ketaatan</button>
@@ -236,7 +254,8 @@
   </div>
 </section>
 
-<footer>
+<!-- ===== FOOTER ===== -->
+<footer class="modern-footer">
   <div class="footer-grid">
     <div class="footer-brand">
       <div class="ornamen">☽</div>
@@ -264,15 +283,18 @@
   </div>
 </footer>
 
+<!-- ===== BACK TO TOP BUTTON ===== -->
+<button id="back-to-top" title="Kembali ke Atas">↑</button>
+
 <script src="js/main.js"></script>
 
 <script>
-  const filterBtns = document.querySelectorAll('.filter-btn');
+  const filterBtnsCustom = document.querySelectorAll('.filter-btn');
   const nabiCards = document.querySelectorAll('.nabi-card');
 
-  filterBtns.forEach(btn => {
+  filterBtnsCustom.forEach(btn => {
     btn.addEventListener('click', () => {
-      filterBtns.forEach(b => b.classList.remove('active'));
+      filterBtnsCustom.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
 
       const filter = btn.dataset.filter;

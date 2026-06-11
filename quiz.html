@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kuis Interaktif Kisah Nabi & Rasul — Teladan Hidup</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- ===== PRELOADER ===== -->
+<div id="preloader">
+  <div class="preloader-content">
+    <div class="preloader-logo">☽</div>
+    <div class="preloader-text">Para Nabi & Rasul</div>
+    <div class="preloader-bar"></div>
+  </div>
+</div>
+
+<!-- ===== SCROLL PROGRESS BAR ===== -->
+<div id="scroll-progress"></div>
+
+<!-- ===== NAVBAR ===== -->
+<nav>
+  <div class="nav-logo">
+    <span class="ornamen">☽</span>
+    <div>
+      <span>Para Nabi & Rasul</span>
+      <small>Teladan Sepanjang Masa</small>
+    </div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="index.html">Beranda</a></li>
+    <li><a href="daftar-nabi.html">Daftar Nabi</a></li>
+    <li><a href="timeline.html">Timeline</a></li>
+    <li><a href="quiz.html" class="active">Quiz</a></li>
+    <li><a href="about.html">Tentang</a></li>
+  </ul>
+  <div class="theme-toggle-container">
+    <button id="theme-toggle" class="theme-toggle-btn" title="Ubah Tema">
+      <span id="theme-toggle-icon">🌙</span>
+    </button>
+  </div>
+  <div class="hamburger"><span></span><span></span><span></span></div>
+</nav>
+
+<div class="page-hero">
+  <h1>Kuis Interaktif</h1>
+  <p>Uji pemahamanmu tentang sejarah, mukjizat, dan keteladanan para utusan Allah SWT.</p>
+</div>
+
+<div class="quiz-container">
+  <div class="quiz-card">
+    
+    <!-- LAYAR PEMBUKA (WELCOME) -->
+    <div id="welcome-screen" class="quiz-welcome-card">
+      <span style="font-size: 3.5rem; display: block; margin-bottom: 15px;">🕌</span>
+      <h2>Mulai Uji Pengetahuanmu!</h2>
+      <p>Kuis ini terdiri dari 20 pertanyaan acak mengenai 15 Nabi dan Rasul yang kisahnya terangkum di website ini.</p>
+      
+      <ul class="quiz-info-list">
+        <li>Terdapat 20 soal pilihan ganda.</li>
+        <li>Jawaban benar akan langsung berwarna hijau dan jawaban salah akan berwarna merah.</li>
+        <li>Terdapat penjelasan singkat setiap kali Anda menjawab soal.</li>
+        <li>Dapatkan lencana kehormatan Islami di akhir kuis sesuai nilai yang dicapai!</li>
+      </ul>
+
+      <button id="btn-start" class="btn-primer" style="font-size: 1.1rem; padding: 14px 45px; width: 100%;">Mulai Kuis Sekarang</button>
+    </div>
+
+    <!-- LAYAR PERTANYAAN (QUESTION) -->
+    <div id="question-screen" style="display: none;">
+      <div class="quiz-progress-text">
+        <span>Soal <span id="current-question-num">1</span> dari <span id="total-questions-num">20</span></span>
+        <span>Skor Saat Ini: <span id="current-score">0</span></span>
+      </div>
+      
+      <div class="quiz-progress-bar">
+        <div id="quiz-progress-fill" class="quiz-progress-fill" style="width: 0%;"></div>
+      </div>
+
+      <div class="quiz-soal">
+        <div id="quiz-soal-nomor" class="quiz-soal-nomor">Pertanyaan 1</div>
+        <h2 id="question-text">Teks pertanyaan kuis akan ditampilkan di sini.</h2>
+      </div>
+
+      <div id="quiz-pilihan" class="quiz-pilihan-container">
+        <!-- Pilihan jawaban di-render dinamis oleh JS -->
+        <button class="pilihan-btn">Opsi A</button>
+        <button class="pilihan-btn">Opsi B</button>
+        <button class="pilihan-btn">Opsi C</button>
+        <button class="pilihan-btn">Opsi D</button>
+      </div>
+
+      <!-- Penjelasan Kuis -->
+      <div id="quiz-explanation" style="display: none; margin-top: 20px; padding: 15px; background: rgba(212,160,23,0.1); border-left: 3px solid var(--emas); border-radius: 4px; font-size: 0.88rem; color: var(--teks-gelap);">
+        <strong>Penjelasan:</strong> <span id="explanation-text">Detail penjelasan jawaban.</span>
+      </div>
+
+      <button id="btn-next" class="btn-primer" style="display: none; margin-top: 25px; width: 100%; padding: 12px;">Soal Selanjutnya →</button>
+    </div>
+
+    <!-- LAYAR HASIL AKHIR (RESULTS) -->
+    <div id="result-screen" class="quiz-result-card" style="display: none;">
+      <span style="font-size: 3.5rem; display: block; margin-bottom: 10px;">🏆</span>
+      <h2>Hasil Kuis Anda</h2>
+      <p>Alhamdulillah, Anda telah menyelesaikan kuis kisah para nabi!</p>
+      
+      <div style="font-size: 1.5rem; margin-bottom: 20px;">
+        Skor Anda: <strong id="final-score" style="color: var(--hijau-mid); font-size: 2.5rem;">0</strong> / 100
+      </div>
+
+      <div style="font-size: 0.95rem; color: var(--teks-abu); margin-bottom: 15px;">
+        Jawaban Benar: <strong id="correct-count">0</strong> dari <strong id="total-count">20</strong> Soal
+      </div>
+
+      <!-- Lencana / Badge Kehormatan -->
+      <div class="badge-display">
+        <span class="badge-icon" id="badge-icon">⭐</span>
+        <span class="badge-name" id="badge-name">Al-Amin</span>
+        <p class="badge-desc" id="badge-desc">Anda sangat mengenal sejarah dakwah dan keteladanan para nabi dengan sempurna!</p>
+      </div>
+
+      <button id="btn-restart" class="btn-primer" style="margin-top: 20px; width: 100%; padding: 14px;">Ulangi Kuis</button>
+    </div>
+
+  </div>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer class="modern-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="ornamen">☽</div>
+      <h3>Para Nabi & Rasul</h3>
+      <p>Website edukasi Islam tentang kisah dan teladan para Nabi & Rasul.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Navigasi</h4>
+      <ul>
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="daftar-nabi.html">Daftar Nabi</a></li>
+        <li><a href="timeline.html">Timeline</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
+        <li><a href="about.html">Tentang</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Informasi</h4>
+      <ul>
+        <li><a href="timeline.html">Timeline Sejarah</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Kisah Para Nabi & Rasul sebagai Teladan Hidup — Dwi Kurniawati Hanifah — UAS Mata Kuliah PAI</p>
+  </div>
+</footer>
+
+<!-- ===== BACK TO TOP BUTTON ===== -->
+<button id="back-to-top" title="Kembali ke Atas">↑</button>
+
+<script src="js/main.js"></script>
+<script src="js/quiz.js"></script>
+</body>
+</html>

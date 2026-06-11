@@ -8,6 +8,18 @@
 </head>
 <body>
 
+<!-- ===== PRELOADER ===== -->
+<div id="preloader">
+  <div class="preloader-content">
+    <div class="preloader-logo">☽</div>
+    <div class="preloader-text">Para Nabi & Rasul</div>
+    <div class="preloader-bar"></div>
+  </div>
+</div>
+
+<!-- ===== SCROLL PROGRESS BAR ===== -->
+<div id="scroll-progress"></div>
+
 <nav>
   <div class="nav-logo">
     <span class="ornamen">☽</span>
@@ -23,6 +35,11 @@
     <li><a href="quiz.html">Quiz</a></li>
     <li><a href="about.html" class="active">Tentang</a></li>
   </ul>
+  <div class="theme-toggle-container">
+    <button id="theme-toggle" class="theme-toggle-btn" title="Ubah Tema">
+      <span id="theme-toggle-icon">🌙</span>
+    </button>
+  </div>
   <div class="hamburger"><span></span><span></span><span></span></div>
 </nav>
 
@@ -106,11 +123,14 @@
 
 </section>
 
-<footer>
+<footer class="modern-footer">
   <div class="footer-bottom" style="background: var(--teks-gelap); padding: 20px;">
     <p style="color: rgba(255,255,255,0.4); text-align: center;">© 2026 Kisah Para Nabi & Rasul sebagai Teladan Hidup — Dwi Kurniawati Hanifah — UAS Mata Kuliah PAI</p>
   </div>
 </footer>
+
+<!-- ===== BACK TO TOP BUTTON ===== -->
+<button id="back-to-top" title="Kembali ke Atas">↑</button>
 
 <script src="js/main.js"></script>
 </body>

@@ -9,6 +9,18 @@
 </head>
 <body>
 
+<!-- ===== PRELOADER ===== -->
+<div id="preloader">
+  <div class="preloader-content">
+    <div class="preloader-logo">☽</div>
+    <div class="preloader-text">Para Nabi & Rasul</div>
+    <div class="preloader-bar"></div>
+  </div>
+</div>
+
+<!-- ===== SCROLL PROGRESS BAR ===== -->
+<div id="scroll-progress"></div>
+
 <!-- ===== NAVBAR ===== -->
 <nav>
   <div class="nav-logo">
@@ -25,6 +37,11 @@
     <li><a href="quiz.html">Quiz</a></li>
     <li><a href="about.html">Tentang</a></li>
   </ul>
+  <div class="theme-toggle-container">
+    <button id="theme-toggle" class="theme-toggle-btn" title="Ubah Tema">
+      <span id="theme-toggle-icon">🌙</span>
+    </button>
+  </div>
   <div class="hamburger" id="hamburger">
     <span></span><span></span><span></span>
   </div>
@@ -65,7 +82,7 @@
 </section>
 
 <!-- ===== FEATURED NABI ===== -->
-<section class="featured-nabi">
+<section class="featured-nabi reveal">
   <div class="section-header">
     <div class="section-badge">✦ Kisah Pilihan ✦</div>
     <h2>Mengenal Para Nabi & Rasul</h2>
@@ -184,7 +201,7 @@
 </section>
 
 <!-- ===== KATEGORI TELADAN ===== -->
-<section class="teladan-section">
+<section class="teladan-section reveal">
   <div class="section-header">
     <div class="section-badge">✦ Hikmah & Pelajaran ✦</div>
     <h2>Kategori Teladan Para Nabi</h2>
@@ -241,18 +258,60 @@
   </div>
 </section>
 
+<!-- ===== DAILY HIKMAH & QUOTE NABI GENERATOR ===== -->
+<section class="hikmah-section reveal">
+  <div class="islamic-pattern"></div>
+  <div class="section-header">
+    <div class="section-badge">✦ Inspirasi & Hikmah ✦</div>
+    <h2>Hikmah Harian & Kutipan Pilihan</h2>
+    <p>Dapatkan hikmah harian dan kutipan penuh teladan dari para nabi untuk mencerahkan harimu.</p>
+  </div>
+
+  <div class="hikmah-grid">
+    <!-- Card Hikmah -->
+    <div class="hikmah-card">
+      <div>
+        <div class="hikmah-card-header">
+          <span class="icon">🕌</span>
+          <h3>Hikmah Hari Ini</h3>
+        </div>
+        <p class="hikmah-content" id="hikmah-text">"Sebaik-baik manusia adalah yang paling bermanfaat bagi manusia lainnya."</p>
+        <span class="hikmah-source" id="hikmah-source">— HR. Ahmad</span>
+      </div>
+      <button class="btn-rotate" id="btn-new-hikmah">
+        <span>🔄</span> Hikmah Lain
+      </button>
+    </div>
+
+    <!-- Card Quote Nabi -->
+    <div class="hikmah-card">
+      <div>
+        <div class="hikmah-card-header">
+          <span class="icon">✨</span>
+          <h3>Kutipan Teladan Nabi</h3>
+        </div>
+        <p class="hikmah-content" id="quote-text">"Ya Tuhan kami, kami telah menzalimi diri kami sendiri. Jika Engkau tidak mengampuni kami dan memberi rahmat kepada kami, niscaya kami termasuk orang-orang yang rugi."</p>
+        <span class="hikmah-source" id="quote-source">— Nabi Adam AS (QS. Al-A'raf: 23)</span>
+      </div>
+      <button class="btn-rotate" id="btn-new-quote">
+        <span>🔄</span> Kutipan Lain
+      </button>
+    </div>
+  </div>
+</section>
+
 <!-- ===== QUIZ CTA ===== -->
-<section class="quiz-section">
+<section class="quiz-section reveal">
   <div class="section-header">
     <div class="section-badge">✦ Uji Pengetahuan ✦</div>
     <h2>Seberapa Kenal Kamu dengan Para Nabi?</h2>
-    <p>Jawab 10 pertanyaan tentang kisah para Nabi & Rasul dan lihat seberapa dalam pemahamanmu!</p>
+    <p>Jawab 20 pertanyaan tentang kisah para Nabi & Rasul dan lihat seberapa dalam pemahamanmu!</p>
   </div>
   <a href="quiz.html" class="btn-primer" style="font-size: 1rem; padding: 16px 40px;">Mulai Quiz Sekarang →</a>
 </section>
 
 <!-- ===== FOOTER ===== -->
-<footer>
+<footer class="modern-footer">
   <div class="footer-grid">
     <div class="footer-brand">
       <div class="ornamen">☽</div>
@@ -270,7 +329,7 @@
       </ul>
     </div>
     <div class="footer-col">
-      <h4>Para Nabi</h4>
+      <h4>Para Nabi Pilihan</h4>
       <ul>
         <li><a href="nabi/adam.html">Nabi Adam AS</a></li>
         <li><a href="nabi/ibrahim.html">Nabi Ibrahim AS</a></li>
@@ -284,6 +343,9 @@
     <p>© 2026 Kisah Para Nabi & Rasul sebagai Teladan Hidup — Dwi Kurniawati Hanifah — UAS Mata Kuliah PAI</p>
   </div>
 </footer>
+
+<!-- ===== BACK TO TOP BUTTON ===== -->
+<button id="back-to-top" title="Kembali ke Atas">↑</button>
 
 <script src="js/main.js"></script>
 </body>
