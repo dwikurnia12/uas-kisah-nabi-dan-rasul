@@ -753,60 +753,6 @@ footer {
   margin: 0 auto;
 }
 
-/* =========================
-   RESPONSIVE TIMELINE MOBILE
-   ========================= */
-
-@media (max-width: 768px) {
-
-  .timeline {
-    position: relative;
-    padding-left: 50px;
-  }
-
-  .timeline::before {
-    left: 25px !important;
-    transform: none;
-  }
-
-  .timeline-item {
-    width: 100% !important;
-    padding: 0 0 30px 0 !important;
-    justify-content: flex-start !important;
-  }
-
-  .timeline-item:nth-child(odd),
-  .timeline-item:nth-child(even) {
-    justify-content: flex-start !important;
-  }
-
-  .timeline-content,
-  .timeline-card {
-    width: calc(100% - 60px) !important;
-    max-width: none !important;
-    margin-left: 50px !important;
-  }
-
-  .timeline-icon,
-  .timeline-dot {
-    left: 25px !important;
-    transform: translateX(-50%);
-  }
-
-  .timeline-content h3,
-  .timeline-card h3 {
-    font-size: 1.2rem;
-    line-height: 1.4;
-  }
-
-  .timeline-content p,
-  .timeline-card p {
-    font-size: 0.95rem;
-    line-height: 1.7;
-    word-break: normal;
-  }
-}
-
 .nabi-info-detail h1 { font-size: 2.4rem; color: var(--putih); }
 .nabi-info-detail .arab { font-size: 1.8rem; color: var(--emas-muda); direction: rtl; }
 .nabi-info-detail .meta { display: flex; gap: 20px; margin-top: 16px; flex-wrap: wrap; }
@@ -1487,4 +1433,53 @@ footer .footer-col ul a::after {
 
 footer .footer-col ul a:hover::after {
   width: 100%;
+}
+
+/* =========================
+   MOBILE TIMELINE FIX
+========================= */
+@media (max-width:768px){
+
+  .timeline-container,
+  .timeline {
+    width:100%;
+    padding:20px 10px;
+  }
+
+  .timeline::before{
+    left:30px !important;
+  }
+
+  .timeline-item{
+    width:100% !important;
+    display:block !important;
+    margin-bottom:40px;
+    padding-left:70px !important;
+  }
+
+  .timeline-item:nth-child(even){
+    left:0 !important;
+  }
+
+  .timeline-content,
+  .timeline-card{
+    width:100% !important;
+    max-width:none !important;
+    min-width:auto !important;
+  }
+
+  .timeline-icon{
+    left:30px !important;
+    transform:translateX(-50%);
+  }
+
+  .timeline-content h3{
+    font-size:1.2rem;
+  }
+
+  .timeline-content p{
+    font-size:0.95rem;
+    line-height:1.7;
+    word-break:normal;
+  }
 }
