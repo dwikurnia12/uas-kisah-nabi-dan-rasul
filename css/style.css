@@ -1439,7 +1439,7 @@ footer .footer-col ul a:hover::after {
 @media screen and (max-width: 768px){
 
   .timeline-line{
-    left: 25px;
+    left: 40px;
     transform: none;
   }
 
