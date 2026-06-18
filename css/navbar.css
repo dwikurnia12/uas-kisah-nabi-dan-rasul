@@ -76,3 +76,12 @@ nav {
   background: var(--putih);
   transition: 0.3s;
 }
+
+/* ===== DARK THEME OVERRIDES FOR NAVBAR ===== */
+body.dark-theme .nav-logo span {
+  color: #FFFFFF !important;
+}
+
+body.dark-theme .hamburger span {
+  background: #FFFFFF !important;
+}

@@ -173,8 +173,8 @@ document.addEventListener('DOMContentLoaded', () => {
     welcomeScreen.style.display = 'none';
     questionScreen.style.display = 'block';
     
-    // Acak urutan pertanyaan
-    shuffledQuestions = [...questionBank].sort(() => Math.random() - 0.5);
+    // Acak urutan pertanyaan dan batasi ke 10 soal
+    shuffledQuestions = [...questionBank].sort(() => Math.random() - 0.5).slice(0, 10);
     currentQuestionIndex = 0;
     score = 0;
     
@@ -228,7 +228,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (selectedIndex === correctIndex) {
       // Jawaban Benar
-      score += 5; // 20 soal * 5 = 100 poin
+      score += 10; // 10 soal * 10 = 100 poin
       currentScoreSpan.textContent = score;
     } else {
       // Jawaban Salah

@@ -459,8 +459,8 @@ section { padding: 80px 5%; }
 
 /* ===== FOOTER ===== */
 footer {
-  background: var(--teks-gelap);
-  color: rgba(255,255,255,0.7);
+  background: #112B21 !important;
+  color: rgba(255,255,255,0.7) !important;
   padding: 56px 5% 28px;
 }
 
@@ -498,11 +498,12 @@ footer {
 .footer-col ul a:hover { color: var(--emas); }
 
 .footer-bottom {
+  background: transparent !important;
   border-top: 1px solid rgba(255,255,255,0.1);
   padding-top: 24px;
   text-align: center;
   font-size: 0.82rem;
-  color: rgba(255,255,255,0.4);
+  color: rgba(255,255,255,0.4) !important;
 }
 
 /* ===== DAFTAR NABI PAGE ===== */
@@ -959,6 +960,65 @@ body.dark-theme .teladan-list li {
 
 body.dark-theme .hero-ayat {
   background: rgba(0,0,0,0.25);
+}
+
+/* --- Readability Overrides for Headings & Text in Dark Theme --- */
+body.dark-theme h1,
+body.dark-theme h2,
+body.dark-theme h3,
+body.dark-theme h4,
+body.dark-theme h5,
+body.dark-theme h6 {
+  color: var(--teks-gelap) !important;
+}
+
+/* Maintain gold highlights */
+body.dark-theme h1 .emas,
+body.dark-theme h2 .emas,
+body.dark-theme h3 .emas,
+body.dark-theme .emas,
+body.dark-theme .emas-muda,
+body.dark-theme .badge-name,
+body.dark-theme .timeline-era {
+  color: var(--emas-muda) !important;
+}
+
+/* Elements that must maintain white text on dark background */
+body.dark-theme .btn-sekunder {
+  color: #FFFFFF !important;
+  border-color: rgba(255,255,255,0.5) !important;
+}
+
+body.dark-theme .chip-nabi {
+  color: #FFFFFF !important;
+}
+
+body.dark-theme .nabi-card-header h3 {
+  color: #FFFFFF !important;
+}
+
+body.dark-theme .box-ayat {
+  color: #FFFFFF !important;
+}
+
+body.dark-theme .box-ayat p {
+  color: rgba(255,255,255,0.9) !important;
+}
+
+body.dark-theme .filter-btn.active {
+  color: #FFFFFF !important;
+}
+
+body.dark-theme .nabi-detail-hero,
+body.dark-theme .nabi-detail-hero h1,
+body.dark-theme .nabi-detail-hero .meta,
+body.dark-theme .nabi-detail-hero .meta-item,
+body.dark-theme .nabi-detail-hero .meta-item strong {
+  color: #FFFFFF !important;
+}
+
+body.dark-theme footer {
+  background: #112B21 !important;
 }
 
 /* ===== SCROLL PROGRESS BAR ===== */
@@ -1435,73 +1495,153 @@ footer .footer-col ul a:hover::after {
   width: 100%;
 }
 
-/* ===== TIMELINE MOBILE ===== */
+/* ===== SMOOTHER HOVERS & TRANSITIONS ===== */
+.nabi-card,
+.teladan-card,
+.timeline-card,
+.hikmah-card,
+.pilihan-btn,
+.filter-btn,
+.btn-primer,
+.btn-sekunder {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              background-color 0.3s ease,
+              border-color 0.3s ease,
+              color 0.3s ease;
+}
+
+.pilihan-btn:hover:not(:disabled) {
+  transform: translateX(6px);
+}
+
+/* ===== TIMELINE MOBILE & RESPONSIVE AUDIT ===== */
 @media screen and (max-width:768px){
 
-  .timeline-wrapper{
-    padding: 0 15px;
+  .timeline-wrapper {
+    padding: 0 15px 0 25px;
   }
 
-  .timeline-line{
-    left: 30px;
-    transform:none;
+  .timeline-line {
+    left: 18px;
+    transform: none;
+    width: 2px;
   }
 
-  .timeline-item{
-    display:grid;
-    grid-template-columns:60px 1fr;
-    gap:12px;
-    margin-bottom:25px;
-    align-items:flex-start;
+  .timeline-item {
+    display: grid;
+    grid-template-columns: 36px 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "tengah content-top"
+      "tengah content-bottom";
+    gap: 6px 16px;
+    margin-bottom: 35px;
+    align-items: start;
   }
 
-  /* titik timeline */
-  .timeline-tengah{
-    grid-column:1;
-    width:60px;
-    justify-content:center;
+  .timeline-tengah {
+    grid-area: tengah;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    padding-top: 4px;
   }
 
-  .timeline-dot{
-    width:40px;
-    height:40px;
-    font-size:1rem;
+  .timeline-dot {
+    width: 36px;
+    height: 36px;
+    font-size: 0.95rem;
+    z-index: 2;
   }
 
-  /* card kiri & kanan jadi satu kolom */
   .timeline-kiri,
-  .timeline-kanan{
-    grid-column:2;
-    width:100%;
-    padding:0 !important;
-    text-align:left !important;
+  .timeline-kanan {
+    display: block !important;
+    width: 100% !important;
+    padding: 0 !important;
+    text-align: left !important;
+    margin: 0 !important;
   }
 
-  .timeline-item:nth-child(even) .timeline-kiri,
-  .timeline-item:nth-child(even) .timeline-kanan{
-    padding:0 !important;
-    text-align:left !important;
+  .timeline-item:nth-child(odd) .timeline-kiri {
+    grid-area: content-top;
+  }
+  .timeline-item:nth-child(odd) .timeline-kanan {
+    grid-area: content-bottom;
   }
 
-  .timeline-card{
-    width:100%;
-    margin:0;
-    padding:15px;
-    box-sizing:border-box;
+  .timeline-item:nth-child(even) .timeline-kiri {
+    grid-area: content-bottom;
+  }
+  .timeline-item:nth-child(even) .timeline-kanan {
+    grid-area: content-top;
   }
 
-  .timeline-card h4{
-    font-size:0.95rem;
+  .timeline-card {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 16px 20px;
+    box-sizing: border-box;
   }
 
-  .timeline-card p{
-    font-size:0.85rem;
-    line-height:1.6;
+  .timeline-card h4 {
+    font-size: 0.95rem;
   }
 
-  .timeline-era{
-    display:block;
-    margin-bottom:8px;
-    font-size:0.8rem;
+  .timeline-card p {
+    font-size: 0.85rem;
+    line-height: 1.6;
+  }
+
+  .timeline-era {
+    display: inline-block;
+    font-size: 0.8rem;
+    color: var(--emas);
+    font-weight: 700;
+    margin-top: 4px;
+    padding-left: 2px;
+  }
+
+  /* Responsive Grid Adjustments */
+  .hikmah-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .hero-stats {
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+  }
+
+  /* Footer Adjustments on Mobile */
+  footer {
+    text-align: center;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 32px;
+  }
+
+  .footer-brand {
+    margin-bottom: 15px;
+  }
+
+  .footer-col {
+    margin-bottom: 15px;
+  }
+
+  footer .footer-col ul a::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .quiz-card {
+    padding: 24px 16px;
   }
 }
