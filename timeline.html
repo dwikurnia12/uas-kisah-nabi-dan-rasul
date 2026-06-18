@@ -1,333 +1,359 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Timeline Sejarah Para Nabi — Teladan Hidup</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
 
-<!-- ===== PRELOADER ===== -->
-<div id="preloader">
-  <div class="preloader-content">
-    <div class="preloader-logo">☽</div>
-    <div class="preloader-text">Para Nabi & Rasul</div>
-    <div class="preloader-bar"></div>
-  </div>
-</div>
-
-<!-- ===== SCROLL PROGRESS BAR ===== -->
-<div id="scroll-progress"></div>
-
-<!-- ===== NAVBAR ===== -->
-<nav>
-  <div class="nav-logo">
-    <span class="ornamen">☽</span>
-    <div>
-      <span>Para Nabi & Rasul</span>
-      <small>Teladan Sepanjang Masa</small>
+  <!-- ===== PRELOADER ===== -->
+  <div id="preloader">
+    <div class="preloader-content">
+      <div class="preloader-logo">☽</div>
+      <div class="preloader-text">Para Nabi & Rasul</div>
+      <div class="preloader-bar"></div>
     </div>
   </div>
-  <ul class="nav-links">
-    <li><a href="index.html">Beranda</a></li>
-    <li><a href="daftar-nabi.html">Daftar Nabi</a></li>
-    <li><a href="timeline.html" class="active">Timeline</a></li>
-    <li><a href="quiz.html">Quiz</a></li>
-    <li><a href="about.html">Tentang</a></li>
-  </ul>
-  <div class="theme-toggle-container">
-    <button id="theme-toggle" class="theme-toggle-btn" title="Ubah Tema">
-      <span id="theme-toggle-icon">🌙</span>
-    </button>
-  </div>
-  <div class="hamburger"><span></span><span></span><span></span></div>
-</nav>
 
-<div class="page-hero">
-  <h1>Timeline Sejarah Para Nabi</h1>
-  <p>Perjalanan panjang dakwah para utusan Allah dari masa ke masa.</p>
-</div>
+  <!-- ===== SCROLL PROGRESS BAR ===== -->
+  <div id="scroll-progress"></div>
 
-<!-- ===== TIMELINE FILTER & SEARCH ===== -->
-<div class="divider-bintang" style="margin-top: 50px;"><span>✦ ☽ ✦</span></div>
-
-<div class="timeline-filter-bar">
-  <button class="filter-btn active" data-era="semua">Semua Era</button>
-  <button class="filter-btn" data-era="awal">Awal Penciptaan</button>
-  <button class="filter-btn" data-era="pra-sejarah">Pra-Sejarah</button>
-  <button class="filter-btn" data-era="sm">Sebelum Masehi (SM)</button>
-  <button class="filter-btn" data-era="m">Masehi (M)</button>
-</div>
-
-<div class="timeline-search-box">
-  <input type="text" id="searchTimeline" placeholder="🔍 Cari nabi atau deskripsi peristiwa...">
-</div>
-
-<div class="timeline-wrapper">
-  <div class="timeline-line"></div>
-
-  <!-- ITEM 1: ADAM -->
-  <div class="timeline-item reveal" data-era="awal">
-    <div class="timeline-kiri">
-      <div class="timeline-card">
-        <h4>🌿 Nabi Adam AS</h4>
-        <p>Manusia pertama, diciptakan dari tanah. Mulai era kehidupan manusia di bumi.</p>
+  <!-- ===== NAVBAR ===== -->
+  <nav>
+    <div class="nav-logo">
+      <span class="ornamen">☽</span>
+      <div>
+        <span>Para Nabi & Rasul</span>
+        <small>Teladan Sepanjang Masa</small>
       </div>
     </div>
-    <div class="timeline-tengah"><div class="timeline-dot">🌿</div></div>
-    <div class="timeline-kanan">
-      <span class="timeline-era">Awal Penciptaan</span>
+    <ul class="nav-links">
+      <li><a href="index.html">Beranda</a></li>
+      <li><a href="daftar-nabi.html">Daftar Nabi</a></li>
+      <li><a href="timeline.html" class="active">Timeline</a></li>
+      <li><a href="quiz.html">Quiz</a></li>
+      <li><a href="about.html">Tentang</a></li>
+    </ul>
+    <div class="theme-toggle-container">
+      <button id="theme-toggle" class="theme-toggle-btn" title="Ubah Tema">
+        <span id="theme-toggle-icon">🌙</span>
+      </button>
     </div>
+    <div class="hamburger"><span></span><span></span><span></span></div>
+  </nav>
+
+  <div class="page-hero">
+    <h1>Timeline Sejarah Para Nabi</h1>
+    <p>Perjalanan panjang dakwah para utusan Allah dari masa ke masa.</p>
   </div>
 
-  <!-- ITEM 2: IDRIS -->
-  <div class="timeline-item reveal" data-era="pra-sejarah">
-    <div class="timeline-kiri">
-      <span class="timeline-era">Pra-Sejarah</span>
+  <!-- ===== TIMELINE FILTER & SEARCH ===== -->
+  <div class="divider-bintang" style="margin-top: 50px;"><span>✦ ☽ ✦</span></div>
+
+  <div class="timeline-filter-bar">
+    <button class="filter-btn active" data-era="semua">Semua Era</button>
+    <button class="filter-btn" data-era="awal">Awal Penciptaan</button>
+    <button class="filter-btn" data-era="pra-sejarah">Pra-Sejarah</button>
+    <button class="filter-btn" data-era="sm">Sebelum Masehi (SM)</button>
+    <button class="filter-btn" data-era="m">Masehi (M)</button>
+  </div>
+
+  <div class="timeline-search-box">
+    <input type="text" id="searchTimeline" placeholder="🔍 Cari nabi atau deskripsi peristiwa...">
+  </div>
+
+  <div class="timeline-wrapper">
+    <div class="timeline-line"></div>
+
+    <!-- ITEM 1: ADAM -->
+    <div class="timeline-item reveal" data-era="awal">
+      <div class="timeline-kiri">
+        <div class="timeline-card">
+          <h4>🌿 Nabi Adam AS</h4>
+          <p>Manusia pertama, diciptakan dari tanah. Mulai era kehidupan manusia di bumi.</p>
+        </div>
+      </div>
+      <div class="timeline-tengah">
+        <div class="timeline-dot">🌿</div>
+      </div>
+      <div class="timeline-kanan">
+        <span class="timeline-era">Awal Penciptaan</span>
+      </div>
     </div>
-    <div class="timeline-tengah"><div class="timeline-dot">✍️</div></div>
-    <div class="timeline-kanan">
-      <div class="timeline-card">
-        <h4>✍️ Nabi Idris AS</h4>
-        <p>Nabi yang diangkat Allah ke tempat yang tinggi. Dikenal sebagai ahli ilmu pengetahuan.</p>
+
+    <!-- ITEM 2: IDRIS -->
+    <div class="timeline-item reveal" data-era="pra-sejarah">
+      <div class="timeline-kiri">
+        <span class="timeline-era">Pra-Sejarah</span>
+      </div>
+      <div class="timeline-tengah">
+        <div class="timeline-dot">✍️</div>
+      </div>
+      <div class="timeline-kanan">
+        <div class="timeline-card">
+          <h4>✍️ Nabi Idris AS</h4>
+          <p>Nabi yang diangkat Allah ke tempat yang tinggi. Dikenal sebagai ahli ilmu pengetahuan.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ITEM 3: NUH -->
+    <div class="timeline-item reveal" data-era="sm">
+      <div class="timeline-kiri">
+        <div class="timeline-card">
+          <h4>⛵ Nabi Nuh AS</h4>
+          <p>Berdakwah 950 tahun. Banjir besar menghapus kaum yang durhaka. Bahtera menyelamatkan yang beriman.</p>
+        </div>
+      </div>
+      <div class="timeline-tengah">
+        <div class="timeline-dot">⛵</div>
+      </div>
+      <div class="timeline-kanan">
+        <span class="timeline-era">±3000-2500 SM</span>
+      </div>
+    </div>
+
+    <!-- ITEM 4: HUD -->
+    <div class="timeline-item reveal" data-era="sm">
+      <div class="timeline-kiri">
+        <span class="timeline-era">±2500 SM</span>
+      </div>
+      <div class="timeline-tengah">
+        <div class="timeline-dot">🌬️</div>
+      </div>
+      <div class="timeline-kanan">
+        <div class="timeline-card">
+          <h4>🌬️ Nabi Hud AS</h4>
+          <p>Diutus kepada kaum 'Ad yang terkenal kuat namun sombong. Mengajak mereka kembali menyembah Allah.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ITEM 5: SHALEH -->
+    <div class="timeline-item reveal" data-era="sm">
+      <div class="timeline-kiri">
+        <div class="timeline-card">
+          <h4>🐪 Nabi Shaleh AS</h4>
+          <p>Diutus kepada kaum Tsamud. Membawa mukjizat unta betina sebagai bukti kerasulannya.</p>
+        </div>
+      </div>
+      <div class="timeline-tengah">
+        <div class="timeline-dot">🐪</div>
+      </div>
+      <div class="timeline-kanan">
+        <span class="timeline-era">±2200 SM</span>
+      </div>
+    </div>
+
+    <!-- ITEM 6: IBRAHIM -->
+    <div class="timeline-item reveal" data-era="sm">
+      <div class="timeline-kiri">
+        <div class="timeline-card">
+          <h4>🔥 Nabi Ibrahim AS</h4>
+          <p>Khalilullah (kekasih Allah). Mengajarkan tauhid, menghancurkan berhala, selamat dari api Namrud, dan
+            membangun Ka'bah bersama Nabi Ismail AS.</p>
+        </div>
+      </div>
+      <div class="timeline-tengah">
+        <div class="timeline-dot">🔥</div>
+      </div>
+      <div class="timeline-kanan">
+        <span class="timeline-era">±2000–1800 SM</span>
+      </div>
+    </div>
+
+    <!-- ITEM 7: LUTH -->
+    <div class="timeline-item reveal" data-era="sm">
+      <div class="timeline-kiri">
+        <span class="timeline-era">±1900 SM</span>
+      </div>
+      <div class="timeline-tengah">
+        <div class="timeline-dot">🏙️</div>
+      </div>
+      <div class="timeline-kanan">
+        <div class="timeline-card">
+          <h4>🏙️ Nabi Luth AS</h4>
+          <p>Keponakan Nabi Ibrahim AS. Diutus kepada kaum Sodom yang melakukan berbagai kemungkaran dan penyimpangan
+            moral.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ITEM 8: ISMAIL -->
+    <div class="timeline-item reveal" data-era="sm">
+      <div class="timeline-kiri">
+        <div class="timeline-card">
+          <h4>🕌 Nabi Ismail AS</h4>
+          <p>Putra Nabi Ibrahim AS. Menjadi teladan ketaatan kepada Allah dan bersama ayahnya membangun Ka'bah.</p>
+        </div>
+      </div>
+      <div class="timeline-tengah">
+        <div class="timeline-dot">🕌</div>
+      </div>
+      <div class="timeline-kanan">
+        <span class="timeline-era">±1900–1800 SM</span>
+      </div>
+    </div>
+
+    <!-- ITEM 9: ISHAQ -->
+    <div class="timeline-item reveal" data-era="sm">
+      <div class="timeline-kiri">
+        <span class="timeline-era">±1800 SM</span>
+      </div>
+      <div class="timeline-tengah">
+        <div class="timeline-dot">🌟</div>
+      </div>
+      <div class="timeline-kanan">
+        <div class="timeline-card">
+          <h4>🌟 Nabi Ishaq AS</h4>
+          <p>Putra Nabi Ibrahim AS dari Siti Sarah. Menjadi penerus dakwah tauhid dan leluhur banyak nabi dari Bani
+            Israil.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ITEM 10: YAQUB -->
+    <div class="timeline-item reveal" data-era="sm">
+      <div class="timeline-kiri">
+        <div class="timeline-card">
+          <h4>👨‍👦 Nabi Yaqub AS</h4>
+          <p>Putra Nabi Ishaq AS dan ayah Nabi Yusuf AS. Dikenal karena kesabaran dan kasih sayangnya kepada keluarga.
+          </p>
+        </div>
+      </div>
+      <div class="timeline-tengah">
+        <div class="timeline-dot">👨‍👦</div>
+      </div>
+      <div class="timeline-kanan">
+        <span class="timeline-era">±1700 SM</span>
+      </div>
+    </div>
+
+    <!-- ITEM 11: YUSUF -->
+    <div class="timeline-item reveal" data-era="sm">
+      <div class="timeline-kiri">
+        <span class="timeline-era">±1700–1600 SM</span>
+      </div>
+      <div class="timeline-tengah">
+        <div class="timeline-dot">👑</div>
+      </div>
+      <div class="timeline-kanan">
+        <div class="timeline-card">
+          <h4>👑 Nabi Yusuf AS</h4>
+          <p>Dari sumur ke penjara hingga menjadi pejabat Mesir. Kisah terbaik tentang kesabaran, kejujuran, dan
+            pengampunan.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ITEM 12: AYYUB -->
+    <div class="timeline-item reveal" data-era="sm">
+      <div class="timeline-kiri">
+        <div class="timeline-card">
+          <h4>💚 Nabi Ayyub AS</h4>
+          <p>Diuji dengan penyakit berat selama bertahun-tahun. Tetap sabar dan bersyukur hingga Allah menyembuhkannya.
+          </p>
+        </div>
+      </div>
+      <div class="timeline-tengah">
+        <div class="timeline-dot">💚</div>
+      </div>
+      <div class="timeline-kanan">
+        <span class="timeline-era">±1600-1300 SM</span>
+      </div>
+    </div>
+
+    <!-- ITEM 13: MUSA -->
+    <div class="timeline-item reveal" data-era="sm">
+      <div class="timeline-kiri">
+        <span class="timeline-era">±1300-1200 SM</span>
+      </div>
+      <div class="timeline-tengah">
+        <div class="timeline-dot">🪄</div>
+      </div>
+      <div class="timeline-kanan">
+        <div class="timeline-card">
+          <h4>🪄 Nabi Musa AS</h4>
+          <p>Membebaskan Bani Israil dari penindasan Firaun, menerima Taurat di Bukit Sinai, serta menunjukkan berbagai
+            mukjizat atas izin Allah.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ITEM 14: ISA -->
+    <div class="timeline-item reveal" data-era="m">
+      <div class="timeline-kiri">
+        <div class="timeline-card">
+          <h4>✨ Nabi Isa AS</h4>
+          <p>Nabi Isa AS menerima Injil dan diberi berbagai mukjizat, seperti menyembuhkan orang sakit dan menghidupkan
+            orang mati atas izin Allah.</p>
+        </div>
+      </div>
+      <div class="timeline-tengah">
+        <div class="timeline-dot">✨</div>
+      </div>
+      <div class="timeline-kanan">
+        <span class="timeline-era">±100 SM – 33 M</span>
+      </div>
+    </div>
+
+    <!-- ITEM 15: MUHAMMAD -->
+    <div class="timeline-item reveal" data-era="m">
+      <div class="timeline-kiri">
+        <span class="timeline-era">570 – 632 M</span>
+      </div>
+      <div class="timeline-tengah">
+        <div class="timeline-dot">⭐</div>
+      </div>
+      <div class="timeline-kanan">
+        <div class="timeline-card" style="border-left-color: var(--emas); background: rgba(212,160,23,0.05);">
+          <h4 style="color: var(--emas);">⭐ Nabi Muhammad SAW</h4>
+          <p>Khatamul Anbiya, penutup seluruh nabi. Membawa Islam sebagai agama sempurna dan rahmat bagi seluruh alam.
+          </p>
+        </div>
       </div>
     </div>
   </div>
 
-  <!-- ITEM 3: NUH -->
-  <div class="timeline-item reveal" data-era="sm">
-    <div class="timeline-kiri">
-      <div class="timeline-card">
-        <h4>⛵ Nabi Nuh AS</h4>
-        <p>Berdakwah 950 tahun. Banjir besar menghapus kaum yang durhaka. Bahtera menyelamatkan yang beriman.</p>
+  <!-- ===== FOOTER ===== -->
+  <footer class="modern-footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="ornamen">☽</div>
+        <h3>Para Nabi & Rasul</h3>
+        <p>Website edukasi Islam tentang kisah dan teladan para Nabi & Rasul.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigasi</h4>
+        <ul>
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="daftar-nabi.html">Daftar Nabi</a></li>
+          <li><a href="timeline.html">Timeline</a></li>
+          <li><a href="quiz.html">Quiz</a></li>
+          <li><a href="about.html">Tentang</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Informasi</h4>
+        <ul>
+          <li><a href="timeline.html">Timeline Sejarah</a></li>
+        </ul>
       </div>
     </div>
-    <div class="timeline-tengah"><div class="timeline-dot">⛵</div></div>
-    <div class="timeline-kanan">
-      <span class="timeline-era">±3000-2500 SM</span>
+    <div class="footer-bottom">
+      <p>© 2026 Kisah Para Nabi & Rasul sebagai Teladan Hidup — Dwi Kurniawati Hanifah — UAS Mata Kuliah PAI</p>
     </div>
-  </div>
+  </footer>
 
-  <!-- ITEM 4: HUD -->
-  <div class="timeline-item reveal" data-era="sm">
-    <div class="timeline-kiri">
-      <span class="timeline-era">±2500 SM</span>
-    </div>
-    <div class="timeline-tengah">
-      <div class="timeline-dot">🌬️</div>
-    </div>
-    <div class="timeline-kanan">
-      <div class="timeline-card">
-        <h4>🌬️ Nabi Hud AS</h4>
-        <p>Diutus kepada kaum 'Ad yang terkenal kuat namun sombong. Mengajak mereka kembali menyembah Allah.</p>
-      </div>
-    </div>
-  </div>
+  <!-- ===== BACK TO TOP BUTTON ===== -->
+  <button id="back-to-top" title="Kembali ke Atas">↑</button>
 
-  <!-- ITEM 5: SHALEH -->
-  <div class="timeline-item reveal" data-era="sm">
-    <div class="timeline-kiri">
-      <div class="timeline-card">
-        <h4>🐪 Nabi Shaleh AS</h4>
-        <p>Diutus kepada kaum Tsamud. Membawa mukjizat unta betina sebagai bukti kerasulannya.</p>
-      </div>
-    </div>
-    <div class="timeline-tengah">
-      <div class="timeline-dot">🐪</div>
-    </div>
-    <div class="timeline-kanan">
-      <span class="timeline-era">±2200 SM</span>
-    </div>
-  </div>
-
-  <!-- ITEM 6: IBRAHIM -->
-  <div class="timeline-item reveal" data-era="sm">
-    <div class="timeline-kiri">
-      <div class="timeline-card">
-        <h4>🔥 Nabi Ibrahim AS</h4>
-        <p>Khalilullah (kekasih Allah). Mengajarkan tauhid, menghancurkan berhala, selamat dari api Namrud, dan membangun Ka'bah bersama Nabi Ismail AS.</p>
-      </div>
-    </div>
-    <div class="timeline-tengah">
-      <div class="timeline-dot">🔥</div>
-    </div>
-    <div class="timeline-kanan">
-      <span class="timeline-era">±2000–1800 SM</span>
-    </div>
-  </div>
-
-  <!-- ITEM 7: LUTH -->
-  <div class="timeline-item reveal" data-era="sm">
-    <div class="timeline-kiri">
-      <span class="timeline-era">±1900 SM</span>
-    </div>
-    <div class="timeline-tengah">
-      <div class="timeline-dot">🏙️</div>
-    </div>
-    <div class="timeline-kanan">
-      <div class="timeline-card">
-        <h4>🏙️ Nabi Luth AS</h4>
-        <p>Keponakan Nabi Ibrahim AS. Diutus kepada kaum Sodom yang melakukan berbagai kemungkaran dan penyimpangan moral.</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- ITEM 8: ISMAIL -->
-  <div class="timeline-item reveal" data-era="sm">
-    <div class="timeline-kiri">
-      <div class="timeline-card">
-        <h4>🕌 Nabi Ismail AS</h4>
-        <p>Putra Nabi Ibrahim AS. Menjadi teladan ketaatan kepada Allah dan bersama ayahnya membangun Ka'bah.</p>
-      </div>
-    </div>
-    <div class="timeline-tengah">
-      <div class="timeline-dot">🕌</div>
-    </div>
-    <div class="timeline-kanan">
-      <span class="timeline-era">±1900–1800 SM</span>
-    </div>
-  </div>
-
-  <!-- ITEM 9: ISHAQ -->
-  <div class="timeline-item reveal" data-era="sm">
-    <div class="timeline-kiri">
-      <span class="timeline-era">±1800 SM</span>
-    </div>
-    <div class="timeline-tengah">
-      <div class="timeline-dot">🌟</div>
-    </div>
-    <div class="timeline-kanan">
-      <div class="timeline-card">
-        <h4>🌟 Nabi Ishaq AS</h4>
-        <p>Putra Nabi Ibrahim AS dari Siti Sarah. Menjadi penerus dakwah tauhid dan leluhur banyak nabi dari Bani Israil.</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- ITEM 10: YAQUB -->
-  <div class="timeline-item reveal" data-era="sm">
-    <div class="timeline-kiri">
-      <div class="timeline-card">
-        <h4>👨‍👦 Nabi Yaqub AS</h4>
-        <p>Putra Nabi Ishaq AS dan ayah Nabi Yusuf AS. Dikenal karena kesabaran dan kasih sayangnya kepada keluarga.</p>
-      </div>
-    </div>
-    <div class="timeline-tengah">
-      <div class="timeline-dot">👨‍👦</div>
-    </div>
-    <div class="timeline-kanan">
-      <span class="timeline-era">±1700 SM</span>
-    </div>
-  </div>
-
-  <!-- ITEM 11: YUSUF -->
-  <div class="timeline-item reveal" data-era="sm">
-    <div class="timeline-kiri">
-      <span class="timeline-era">±1700–1600 SM</span>
-    </div>
-    <div class="timeline-tengah">
-      <div class="timeline-dot">👑</div>
-    </div>
-    <div class="timeline-kanan">
-      <div class="timeline-card">
-        <h4>👑 Nabi Yusuf AS</h4>
-        <p>Dari sumur ke penjara hingga menjadi pejabat Mesir. Kisah terbaik tentang kesabaran, kejujuran, dan pengampunan.</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- ITEM 12: AYYUB -->
-  <div class="timeline-item reveal" data-era="sm">
-    <div class="timeline-kiri">
-      <div class="timeline-card">
-        <h4>💚 Nabi Ayyub AS</h4>
-        <p>Diuji dengan penyakit berat selama bertahun-tahun. Tetap sabar dan bersyukur hingga Allah menyembuhkannya.</p>
-      </div>
-    </div>
-    <div class="timeline-tengah"><div class="timeline-dot">💚</div></div>
-    <div class="timeline-kanan">
-      <span class="timeline-era">±1600-1300 SM</span>
-    </div>
-  </div>
-
-  <!-- ITEM 13: MUSA -->
-  <div class="timeline-item reveal" data-era="sm">
-    <div class="timeline-kiri">
-      <span class="timeline-era">±1300-1200 SM</span>
-    </div>
-    <div class="timeline-tengah"><div class="timeline-dot">🪄</div></div>
-    <div class="timeline-kanan">
-      <div class="timeline-card">
-        <h4>🪄 Nabi Musa AS</h4>
-        <p>Membebaskan Bani Israil dari penindasan Firaun, menerima Taurat di Bukit Sinai, serta menunjukkan berbagai mukjizat atas izin Allah.</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- ITEM 14: ISA -->
-  <div class="timeline-item reveal" data-era="m">
-    <div class="timeline-kiri">
-      <div class="timeline-card">
-        <h4>✨ Nabi Isa AS</h4>
-        <p>Nabi Isa AS menerima Injil dan diberi berbagai mukjizat, seperti menyembuhkan orang sakit dan menghidupkan orang mati atas izin Allah.</p>
-      </div>
-    </div>
-    <div class="timeline-tengah"><div class="timeline-dot">✨</div></div>
-    <div class="timeline-kanan">
-      <span class="timeline-era">±100 SM – 33 M</span>
-    </div>
-  </div>
-
-  <!-- ITEM 15: MUHAMMAD -->
-  <div class="timeline-item reveal" data-era="m">
-    <div class="timeline-kiri">
-      <span class="timeline-era">570 – 632 M</span>
-    </div>
-    <div class="timeline-tengah"><div class="timeline-dot">⭐</div></div>
-    <div class="timeline-kanan">
-      <div class="timeline-card" style="border-left-color: var(--emas); background: rgba(212,160,23,0.05);">
-        <h4 style="color: var(--emas);">⭐ Nabi Muhammad SAW</h4>
-        <p>Khatamul Anbiya, penutup seluruh nabi. Membawa Islam sebagai agama sempurna dan rahmat bagi seluruh alam.</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- ===== FOOTER ===== -->
-<footer class="modern-footer">
-  <div class="footer-grid">
-    <div class="footer-brand">
-      <div class="ornamen">☽</div>
-      <h3>Para Nabi & Rasul</h3>
-      <p>Website edukasi Islam tentang kisah dan teladan para Nabi & Rasul.</p>
-    </div>
-    <div class="footer-col">
-      <h4>Navigasi</h4>
-      <ul>
-        <li><a href="index.html">Beranda</a></li>
-        <li><a href="daftar-nabi.html">Daftar Nabi</a></li>
-        <li><a href="timeline.html">Timeline</a></li>
-        <li><a href="quiz.html">Quiz</a></li>
-        <li><a href="about.html">Tentang</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h4>Informasi</h4>
-      <ul>
-        <li><a href="timeline.html">Timeline Sejarah</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <p>© 2026 Kisah Para Nabi & Rasul sebagai Teladan Hidup — Dwi Kurniawati Hanifah — UAS Mata Kuliah PAI</p>
-  </div>
-</footer>
-
-<!-- ===== BACK TO TOP BUTTON ===== -->
-<button id="back-to-top" title="Kembali ke Atas">↑</button>
-
-<script src="js/main.js"></script>
-<script src="js/timeline.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/timeline.js"></script>
 </body>
+
 </html>
